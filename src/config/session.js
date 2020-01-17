@@ -12,7 +12,7 @@ var MongoStore = connectMongo(session);
  * save session in mongodb
  */
 var sessionStore = new MongoStore({
-    //url: `${process.env.DB_CONNECTION}://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
+    // url: `${process.env.DB_CONNECTION}://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
     //url: 'mongodb+srv://luna:Liecoin1@magomart-y5a4q.mongodb.net/Ecommercial?retryWrites=true',
     mongooseConnection: mongoose.connection,
     autoReconnect: true

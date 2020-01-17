@@ -25047,6 +25047,18 @@ a .h_head:hover {
 @media (max-width: 700px){
   *{margin:0; padding: 0;}
 
+img.wow.fadeIn.phone_img {
+    max-width: 100%;
+}
+
+img.phone_two {
+    max-width: 70%!important;
+}
+
+img.phone_one {
+    max-width: 70%!important;
+}
+
 h4 {
     color: white;
 }
