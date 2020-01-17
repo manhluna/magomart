@@ -3,7 +3,7 @@ var session = require("express-session");
 var connectMongo = require("connect-mongo");
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://luna:Liecoin1@magomart-y5a4q.mongodb.net/Ecommercial?retryWrites=true',{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true },(err)=>{})
+mongoose.connect(`mongodb+srv://luna:${process.env.PASS_DB}@magomart-y5a4q.mongodb.net/Ecommercial?retryWrites=true`,{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true },(err)=>{})
 
 var MongoStore = connectMongo(session);
 

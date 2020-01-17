@@ -57,6 +57,6 @@ io.use(passportSocketIo.authorize({
 initSockets(io);
 
 
-server.listen(process.env.APP_PORT, ()=>{
+server.listen(process.env.PORT || 8080, ()=>{
     console.log(` listening on port: ${process.env.APP_PORT}`);
 });
