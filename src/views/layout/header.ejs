@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: hidden; height: 100%;">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="shortcut icon" href="./../assets/img/favicon.png" type="image/x-icon"/>
+    <title><%= title %></title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./../assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    
+    <!--icon font css-->
+    <link rel="stylesheet" href="./../assets/themify-icons.css" />
+    <link rel="stylesheet" href="./../assets/simple-line-icons.css" />
+    <link rel="stylesheet" href="./../assets/all.css" />
+    <link rel="stylesheet" href="./../assets/flaticon.css" />
+    <link rel="stylesheet" href="./../assets/animate.css" />
+    <link rel="stylesheet" href="./../assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./../assets/animate.css" />
+    <link rel="stylesheet" href="./../assets/magnific-popup.css" />
+    <link rel="stylesheet" href="./../assets/style.css" />
+    <link rel="stylesheet" href="./../assets/jquery.multiscroll.css" />
+    <link rel="stylesheet" href="./../assets/style(1).css" />
+    <link rel="stylesheet" href="./../assets/responsive.css" />
+   
+  </head>
+
+  <body style="overflow: hidden; height: 100%;">
+    <header class="full_header">
+      <div class="float-left">
+        <a class="logo" href="/">
+          <img src="./../assets/img/logo-1.png" srcset="./../assets/img/logo-1.png 2x" alt="logo" width="200px"/>
+          <img src="./../assets/img/logo-2.png" srcset="./../assets/img/logo-2.png 2x" alt="logo" width="200px"/>
+        </a>
+      </div>
+      <div class="float-right">
+        
+        <div class="bar_menu">
+          <% if(user){ %>
+            <div class="text-warning font-weight-bold text-uppercase" style="border: solid 2px grey; border-radius: 999px; padding: 5px;"><%= user.username %></div>
+            <% }else{ %>
+          <span style="background-color: rgb(255, 255, 255);"></span>
+          <span style="background-color: rgb(255, 255, 255);"></span>
+          <span style="background-color: rgb(255, 255, 255);"></span>        
+        <% } %>
+      </div>
+      </div>
+    </header>
+    <div class="hamburger-menu-wrepper" id="menu">
+      <div class="animation-box">
+        <i class="icon_close close_icon"></i>
+        <div class="menu-box d-table navbar">
+          <ul class="navbar-nav justify-content-end menu offcanfas_menu">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <% if(!user){ %>
+              <li class="nav-item dropdown submenu">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Authentication
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a href="/login" class="nav-link">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/register" class="nav-link">Register</a>
+                  </li>
+                </ul>
+              </li>
+            </li>
+            <% } %>
+            
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="/user/contact">Contact</a>
+            </li>
+            <% if(user){ %>
+              <li class="nav-item dropdown submenu">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Gifts
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a href="/user/gift" class="nav-link">Your Gift</a>
+                  </li>
+                </ul>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            <% } %>
+            
+          </ul>
+          <div class="header_footer">
+            <h5>Follow US</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+            <p>
+              Mago Mart- Copyright 2019. All rights reserved.<br />
+              Made by Mago Group
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
